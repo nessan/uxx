@@ -140,4 +140,4 @@ You can use this software under the [MIT License][]
 [`index_for_uxx`]: https://docs.rs/uxx/latest/uxx/fn.index_for_uxx.html
 [`index_for_u64`]: https://docs.rs/uxx/latest/uxx/fn.index_for_u64.html
 [`index_for_u52`]: https://docs.rs/uxx/latest/uxx/fn.index_for_u52.html
-[`binomial(n,k)`]: https://docs.rs/uxx/latest/uxx/fn.binomial.html
+[`binomial`]: https://docs.rs/uxx/latest/uxx/fn.binomial.html
