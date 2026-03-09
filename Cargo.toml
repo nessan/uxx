@@ -2,3 +2,10 @@
 name = "uxx"
 version = "1.0.0"
 edition = "2024"
+authors = ["Nessan Fitzmaurice <nzznfitz+gh@icloud.com>"]
+description = "Combinadic indexing into unsigned integers that have a fixed number of set bits."
+license = "MIT"
+repository = "https://github.com/nessan/uxx"
+readme = "README.md"
+keywords = ["unsigned integers", "combinadic indexing", "bit manipulation"]
+categories = ["rust-patterns", "mathematics", "algorithms"]
