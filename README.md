@@ -11,7 +11,7 @@
 
 ## Overview
 
-This crate provides functions that map an index to an unsigned integer with a fixed number of set bits, and vice versa. That is, one function takes an index and efficiently returns a unique unsigned integer with a specified number of set bits; the other takes an unsigned integer with a specified number of set bits and returns the equivalent index.
+This Rust crate provides functions that map an index to an unsigned integer having a fixed number of set bits, and vice versa. That is, we have one function that takes an index and efficiently returns a unique unsigned integer with a specified number of set bits, and another that takes an unsigned integer with some number of set bits and returns the equivalent index.
 
 The two principal functions are:
 
@@ -20,7 +20,7 @@ The two principal functions are:
 | [`uxx_for_index`][`uxx_for_index`] | Given an index `i`, a required number of set bits `s`, and a bit size `xx` for the output, this function returns a `u64` with precisely `s` bits set to 1 in i lowest `xx` bits and all others set to 0. |
 | [`index_for_uxx`][`index_for_uxx`] | This is the inverse function that is passed a `u64`, where only the lower `xx` bits are _active_, and returns a unique index for that `uxx`.                                                             |
 
-A few extra convenience functions are described below.
+There are also a few extra convenience functions described below.
 
 ## Motivation
 
@@ -80,21 +80,21 @@ As we noted above, a `u52` is a `u64` that uses only the lower 52 bits. This is 
 
 ## Combinadics
 
-The indexing scheme is based on the combinatorial number system, also known as the combinadic system.
+The indexing scheme is based on the [combinatorial number system][], also known as the combinadic system.
 
-It relies on a piece of mathematics that proves that every non-negative integer has a _unique_ representation as a sum of binomial coefficients. That is, given a fixed number of digits `d > 0`, every non-negative integer `s` can be written as a sum:
+It relies on [a piece of mathematics][] that proves that every non-negative integer has a _unique_ representation as a sum of binomial coefficients. That is, given a fixed number of digits `d > 0`, every non-negative integer `s` can be written as a sum:
 
 ```
-s = C(s[1], 1) + C(s[2], 2) + ... + C(s[d], d)
+s = C(s[1],1) + C(s[2],2) + ... + C(s[d],d)
 ```
 
 where the `s[1], s[2], ..., s[d]` are unique, non-negative, and increasing:
 
 ```
-s[d] > s[d-1] > ... > s[2] > s[1] >= 0`.
+s[d] > s[d-1] > ... > s[2] > s[1] >= 0.
 ```
 
-We interpret the `s[i]` as bit locations to be set in a `u64`.
+We interpret `s[i]` as the bit locations to set in a `u64`.
 
 ## Why `u64`s?
 
@@ -135,6 +135,8 @@ You can use this software under the [MIT License][]
 
 [MIT License]: https://opensource.org/license/mit
 [Nessan Fitzmaurice]: mailto:nzznfitz+gh@icloud.com
+[combinatorial number system]: https://en.wikipedia.org/wiki/Combinatorial_number_system
+[a piece of mathematics]: https://arxiv.org/pdf/1601.05794
 
 <!-- Links to docs.rs -->
 

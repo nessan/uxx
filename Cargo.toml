@@ -1,6 +1,6 @@
 [package]
 name = "uxx"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2024"
 authors = ["Nessan Fitzmaurice <nzznfitz+gh@icloud.com>"]
 description = "Combinadic indexing for unsigned integers that have a fixed number of set bits."
