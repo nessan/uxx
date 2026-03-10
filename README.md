@@ -88,7 +88,11 @@ It relies on a piece of mathematics that proves that every non-negative integer 
 s = C(s[1], 1) + C(s[2], 2) + ... + C(s[d], d)
 ```
 
-where the `s[1], s[2], ..., s[d]` are unique, non-negative, and increasing, `s[d] > s[d-1] > ... > s_1 > s_1` &ge; `0`.
+where the `s[1], s[2], ..., s[d]` are unique, non-negative, and increasing:
+
+```
+s[d] > s[d-1] > ... > s[2] > s[1] >= 0`.
+```
 
 We interpret the `s[i]` as bit locations to be set in a `u64`.
 
